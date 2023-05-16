@@ -24,9 +24,8 @@ Create a HTML file of forms.
 Publish the website in the given URL.
 
 ## PROGRAM :
+### Math.html
 ```
-math.html:
-
 <html>
 <head>
 <meta charset='utf-8'>
@@ -91,9 +90,8 @@ Area : <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br/
 </body>
 </html>
 ````
+### View.py:
 ```
-views.py:
-
 from django.shortcuts import render
 def rectarea(request):
     context={}
@@ -114,10 +112,8 @@ def rectarea(request):
         print('Area=',area)
     return render(request,'myapp/math.html',context)
 ```
-
+### urls.py:
 ````
-urls.py:
-
 from django.contrib import admin
 from django.urls import path
 from myapp import views
